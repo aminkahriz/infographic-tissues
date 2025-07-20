@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>انواع بافت در بدن انسان</title>
+    <title>محاسبات سریع شیمی</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,20 +11,23 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            font-size: 14px; /* فونت کوچک‌تر برای جا شدن مطالب بیشتر */
+            font-size: 14px; /* فونت کوچک برای جا شدن مطالب بیشتر */
+            line-height: 1.7;
         }
         .chart-bar {
-            transition: width 0.7s ease-in-out;
+            transition: width 0.8s ease-in-out;
         }
         details > summary {
             cursor: pointer;
-            list-style: none; /* حذف نشانگر پیش‌فرض */
+            list-style: none;
+            display: flex;
+            align-items: center;
         }
         details > summary::-webkit-details-marker {
-            display: none; /* حذف نشانگر در کروم */
+            display: none;
         }
         details > summary::before {
-            content: '◀'; /* آیکون سفارشی */
+            content: '◀';
             margin-left: 8px;
             font-size: 0.8em;
             transition: transform 0.2s;
@@ -32,198 +36,162 @@
         details[open] > summary::before {
             transform: rotate(90deg);
         }
+        .gradient-text {
+            background: linear-gradient(to right, #2dd4bf, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .example-box {
+            background-color: rgba(17, 24, 39, 0.8); /* bg-gray-900 with opacity */
+            border-right: 3px solid #0ea5e9; /* border-sky-500 */
+            padding: 12px;
+            border-radius: 8px;
+            font-family: monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 13px;
+        }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200 p-2 sm:p-4">
+<body class="bg-gray-800 text-gray-300 p-2 sm:p-4">
 
-    <div class="max-w-3xl mx-auto">
+    <div class="max-w-3xl mx-auto bg-gray-900 p-4 rounded-2xl shadow-2xl shadow-cyan-500/10">
 
-        <header class="text-center mb-6">
-            <h1 class="text-2xl sm:text-3xl font-bold text-cyan-400">تحلیل جامع بافت‌های بدن انسان</h1>
-            <p class="text-gray-400 mt-1">بر اساس کتاب زیست‌شناسی دهم (ویژه کنکور)</p>
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold gradient-text">محاسبات سریع شیمی</h1>
+            <p class="text-gray-400 mt-2">کلید طلایی مدیریت زمان در کنکور تجربی</p>
         </header>
 
-        <!-- نمودار گرافیکی مقایسه‌ای -->
-        <div class="bg-gray-800 p-4 rounded-xl mb-6 shadow-lg">
-            <h3 class="text-lg font-semibold mb-4 text-center text-white">نمودار مقایسه‌ای: فضای بین سلولی در بافت‌ها</h3>
-            <div class="space-y-3 text-xs">
-                <!-- بافت پوششی -->
+        <!-- نمودار اهمیت سرعت -->
+        <div class="bg-gray-800 p-4 rounded-xl mb-8">
+            <h3 class="text-lg font-semibold mb-4 text-center text-white">تأثیر سرعت محاسبات بر زمان پاسخ‌گویی</h3>
+            <div class="space-y-4 text-xs">
+                <!-- روش عادی -->
                 <div class="flex items-center">
-                    <span class="w-24 shrink-0">پوششی</span>
-                    <div class="w-full bg-gray-700 rounded-full h-4">
-                        <div class="chart-bar bg-red-500 h-4 rounded-full" style="width: 5%"></div>
+                    <span class="w-28 shrink-0">محاسبه عادی</span>
+                    <div class="w-full bg-gray-700 rounded-full h-5 relative">
+                        <div class="chart-bar bg-red-500 h-5 rounded-full flex items-center justify-center" style="width: 95%">
+                            <span class="text-white font-bold">~۹۰ ثانیه</span>
+                        </div>
                     </div>
-                    <span class="w-12 text-center">بسیار کم</span>
                 </div>
-                <!-- بافت ماهیچه‌ای -->
+                <!-- روش سریع -->
                 <div class="flex items-center">
-                    <span class="w-24 shrink-0">ماهیچه‌ای</span>
-                    <div class="w-full bg-gray-700 rounded-full h-4">
-                        <div class="chart-bar bg-yellow-500 h-4 rounded-full" style="width: 20%"></div>
+                    <span class="w-28 shrink-0">محاسبه سریع (تقریب)</span>
+                    <div class="w-full bg-gray-700 rounded-full h-5 relative">
+                        <div class="chart-bar bg-teal-500 h-5 rounded-full flex items-center justify-center" style="width: 40%">
+                            <span class="text-white font-bold">~۳۵ ثانیه</span>
+                        </div>
                     </div>
-                     <span class="w-12 text-center">کم</span>
-                </div>
-                <!-- بافت عصبی -->
-                <div class="flex items-center">
-                    <span class="w-24 shrink-0">عصبی</span>
-                    <div class="w-full bg-gray-700 rounded-full h-4">
-                        <div class="chart-bar bg-blue-500 h-4 rounded-full" style="width: 35%"></div>
-                    </div>
-                     <span class="w-12 text-center">متوسط</span>
-                </div>
-                <!-- بافت پیوندی -->
-                <div class="flex items-center">
-                    <span class="w-24 shrink-0">پیوندی</span>
-                    <div class="w-full bg-gray-700 rounded-full h-4">
-                        <div class="chart-bar bg-green-500 h-4 rounded-full" style="width: 80%"></div>
-                    </div>
-                     <span class="w-12 text-center">فراوان</span>
                 </div>
             </div>
         </div>
 
+        <!-- تکنیک ۱: هنر تقریب زدن -->
+        <div class="bg-gray-800 p-4 rounded-xl mb-6">
+            <h2 class="text-xl font-bold mb-3 text-sky-400">۱. هنر تقریب زدن (Approximation)</h2>
+            <p class="mb-4">مهم‌ترین تکنیک! اعداد را به نزدیک‌ترین عدد رُند تبدیل کنید تا ضرب و تقسیم آسان شود. این کار در اکثر سوالات کنکور که گزینه‌ها فاصله منطقی دارند، پاسخگوست.</p>
+            
+            <div class="example-box mb-4">
+                <p class="text-gray-400">// Example: Calculate molarity</p>
+                <p><span class="text-pink-400">M</span> = (4.9 g / 98.1 g/mol) / 0.205 L</p>
+                <p class="text-gray-400">// Approximation</p>
+                <p><span class="text-pink-400">M</span> ≈ (5 / 100) / 0.2</p>
+                <p><span class="text-pink-400">M</span> ≈ 0.05 / 0.2 = 0.25 mol/L</p>
+            </div>
 
-        <!-- 1. بافت پوششی -->
-        <div class="bg-gray-800 p-4 rounded-xl mb-4 shadow-lg">
-            <h2 class="text-xl font-bold mb-3 text-cyan-400">۱. بافت پوششی</h2>
-            <p class="mb-4 text-gray-300">این بافت سطوح بدن و اندام‌ها را می‌پوشاند. سلول‌های آن بسیار متراکم و فاقد رگ خونی مستقیم هستند و توسط غشای پایه پشتیبانی می‌شوند.</p>
+            <details class="bg-gray-900/60 p-3 rounded-lg">
+                <summary class="font-semibold text-sky-400">تقریب‌های رایج در شیمی</summary>
+                <ul class="list-disc list-inside mt-3 text-gray-300 space-y-2 pr-2 text-sm">
+                    <li>عدد آووگادرو: <span dir="ltr">6.022 × 10²³ ≈ 6 × 10²³</span></li>
+                    <li>شتاب گرانش: <span dir="ltr">g = 9.8 m/s² ≈ 10 m/s²</span></li>
+                    <li>جرم مولی‌ها: <span dir="ltr">H₂SO₄ = 98.07 g/mol ≈ 100 or 98 g/mol</span></li>
+                    <li>اعداد نزدیک به ۱ یا ۱۰: <span dir="ltr">0.98 ≈ 1</span> یا <span dir="ltr">10.2 ≈ 10</span></li>
+                </ul>
+            </details>
+        </div>
+
+        <!-- تکنیک ۲: تبدیل به کسر -->
+        <div class="bg-gray-800 p-4 rounded-xl mb-6">
+            <h2 class="text-xl font-bold mb-3 text-sky-400">۲. جادوی کسرها (Fractions)</h2>
+            <p class="mb-4">اعداد اعشاری معروف را به کسر تبدیل کنید. کار با کسرها اغلب ساده‌تر از اعشار است و امکان ساده‌سازی را فراهم می‌کند.</p>
             
             <div class="overflow-x-auto">
-                <table class="w-full text-xs sm:text-sm text-center">
-                    <thead class="bg-gray-700 text-cyan-300">
+                <table class="w-full text-sm text-center">
+                    <thead class="bg-gray-700 text-sky-300">
                         <tr>
-                            <th class="p-2 rounded-tr-lg">نوع بافت</th>
-                            <th class="p-2">شکل سلول</th>
-                            <th class="p-2">محل‌های مهم</th>
-                            <th class="p-2 rounded-tl-lg">وظیفه اصلی</th>
+                            <th class="p-2">اعشار</th>
+                            <th class="p-2">کسر</th>
+                            <th class="p-2">اعشار</th>
+                            <th class="p-2">کسر</th>
                         </tr>
                     </thead>
                     <tbody class="bg-gray-800">
                         <tr class="border-b border-gray-700">
-                            <td class="p-2">سنگفرشی ساده</td>
-                            <td class="p-2">плоский</td>
-                            <td class="p-2">دیواره مویرگ و حبابک</td>
-                            <td class="p-2">تبادل سریع مواد</td>
+                            <td class="p-2 font-mono">0.25</td>
+                            <td class="p-2 font-mono">1/4</td>
+                            <td class="p-2 font-mono">0.2</td>
+                            <td class="p-2 font-mono">1/5</td>
                         </tr>
                         <tr class="border-b border-gray-700">
-                            <td class="p-2">سنگفرشی مرکب</td>
-                            <td class="p-2">плоский</td>
-                            <td class="p-2">پوست، دهان، مری</td>
-                            <td class="p-2">محافظت</td>
+                            <td class="p-2 font-mono">0.75</td>
+                            <td class="p-2 font-mono">3/4</td>
+                            <td class="p-2 font-mono">0.4</td>
+                            <td class="p-2 font-mono">2/5</td>
                         </tr>
                         <tr>
-                            <td class="p-2">استوانه‌ای ساده</td>
-                            <td class="p-2">دراز</td>
-                            <td class="p-2">معده و روده</td>
-                            <td class="p-2">جذب و ترشح</td>
+                            <td class="p-2 font-mono">0.5</td>
+                            <td class="p-2 font-mono">1/2</td>
+                            <td class="p-2 font-mono">0.125</td>
+                            <td class="p-2 font-mono">1/8</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <details class="mt-4 bg-gray-900/50 p-3 rounded-lg">
-                <summary class="font-semibold text-cyan-400">نکات کنکوری بافت پوششی</summary>
-                <ul class="list-disc list-inside mt-2 text-gray-300 space-y-2 pr-2 text-xs sm:text-sm">
-                    <li><b>غشای پایه:</b> جزو بافت پوششی است اما سلول ندارد (بی‌جان است) و از پروتئین و گلیکوپروتئین ساخته شده.</li>
-                    <li><b>تغذیه:</b> این بافت رگ خونی ندارد و مواد غذایی را از بافت پیوندی زیرین خود دریافت می‌کند.</li>
-                    <li><b>ریزپرز:</b> سلول‌های استوانه‌ای روده برای افزایش سطح جذب، دارای ریزپرز هستند.</li>
-                    <li><b>لایه شاخی:</b> خارجی‌ترین لایه پوست، از سلول‌های مرده و پر از کراتین تشکیل شده است.</li>
-                </ul>
+            <details class="mt-4 bg-gray-900/60 p-3 rounded-lg">
+                <summary class="font-semibold text-sky-400">مثال کنکوری</summary>
+                 <div class="example-box mt-3">
+                    <p class="text-gray-400">// Calculate mass from moles</p>
+                    <p><span class="text-pink-400">mass</span> = 0.125 mol × 64 g/mol</p>
+                    <p class="text-gray-400">// Using fractions</p>
+                    <p><span class="text-pink-400">mass</span> = (1/8) × 64</p>
+                    <p><span class="text-pink-400">mass</span> = 8 g</p>
+                </div>
             </details>
         </div>
 
-        <!-- 2. بافت پیوندی -->
-        <div class="bg-gray-800 p-4 rounded-xl mb-4 shadow-lg">
-            <h2 class="text-xl font-bold mb-3 text-cyan-400">۲. بافت پیوندی</h2>
-            <p class="mb-4 text-gray-300">وظیفه اتصال و پشتیبانی بافت‌های دیگر را دارد. دارای فضای بین سلولی فراوان است که با ماده زمینه‌ای و رشته‌های پروتئینی (کلاژن و کشسان) پر شده.</p>
+        <!-- تکنیک ۳: حذف گزینه هوشمندانه -->
+        <div class="bg-gray-800 p-4 rounded-xl mb-6">
+            <h2 class="text-xl font-bold mb-3 text-sky-400">۳. حذف گزینه هوشمندانه</h2>
+            <p class="mb-4">قبل از محاسبه کامل، مرتبه بزرگی (توان ۱۰) و اولین رقم معنادار پاسخ را تخمین بزنید. با این کار می‌توانید ۲ یا ۳ گزینه را فوراً حذف کنید.</p>
             
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-center text-xs sm:text-sm">
-                <div class="bg-gray-700 p-2 rounded-lg"><b>پیوندی سست:</b> پشتیبان بافت پوششی</div>
-                <div class="bg-gray-700 p-2 rounded-lg"><b>پیوندی متراکم:</b> در رباط و زردپی</div>
-                <div class="bg-gray-700 p-2 rounded-lg"><b>چربی:</b> ذخیره انرژی و عایق</div>
-                <div class="bg-gray-700 p-2 rounded-lg"><b>خون:</b> ماده زمینه مایع (پلاسما)</div>
-                <div class="bg-gray-700 p-2 rounded-lg"><b>غضروف:</b> نیمه جامد و انعطاف‌پذیر</div>
-                <div class="bg-gray-700 p-2 rounded-lg"><b>استخوان:</b> جامد و مستحکم</div>
-            </div>
-
-            <details class="mt-4 bg-gray-900/50 p-3 rounded-lg">
-                <summary class="font-semibold text-cyan-400">نکات کنکوری بافت پیوندی</summary>
-                <ul class="list-disc list-inside mt-2 text-gray-300 space-y-2 pr-2 text-xs sm:text-sm">
-                    <li><b>تفاوت رباط و زردپی:</b> هر دو پیوندی متراکم هستند. رباط (استخوان به استخوان) و زردپی (عضله به استخوان).</li>
-                    <li><b>خون:</b> تنها بافت پیوندی با ماده زمینه‌ای مایع است.</li>
-                    <li><b>غضروف:</b> مانند بافت پوششی، رگ خونی ندارد.</li>
-                    <li><b>سلول چربی:</b> هسته آن به دلیل تجمع چربی، به حاشیه رانده شده است.</li>
-                </ul>
-            </details>
-        </div>
-
-        <!-- 3. بافت ماهیچه‌ای -->
-        <div class="bg-gray-800 p-4 rounded-xl mb-4 shadow-lg">
-            <h2 class="text-xl font-bold mb-3 text-cyan-400">۳. بافت ماهیچه‌ای</h2>
-            <p class="mb-4 text-gray-300">ویژگی اصلی این بافت، قابلیت انقباض برای ایجاد حرکت است.</p>
-
-            <div class="overflow-x-auto">
-                <table class="w-full text-xs sm:text-sm text-center">
-                    <thead class="bg-gray-700 text-cyan-300">
-                        <tr>
-                            <th class="p-2 rounded-tr-lg">نوع ماهیچه</th>
-                            <th class="p-2">ظاهر</th>
-                            <th class="p-2">انشعاب</th>
-                            <th class="p-2">کنترل</th>
-                            <th class="p-2 rounded-tl-lg">محل</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-gray-800">
-                        <tr class="border-b border-gray-700">
-                            <td class="p-2">اسکلتی</td>
-                            <td class="p-2">مخطط</td>
-                            <td class="p-2">ندارد</td>
-                            <td class="p-2 text-green-400">ارادی</td>
-                            <td class="p-2">متصل به استخوان</td>
-                        </tr>
-                        <tr class="border-b border-gray-700">
-                            <td class="p-2">قلبی</td>
-                            <td class="p-2">مخطط</td>
-                            <td class="p-2 text-yellow-400">دارد</td>
-                            <td class="p-2 text-red-400">غیرارادی</td>
-                            <td class="p-2">دیواره قلب</td>
-                        </tr>
-                        <tr>
-                            <td class="p-2">صاف</td>
-                            <td class="p-2">صاف</td>
-                            <td class="p-2">ندارد</td>
-                            <td class="p-2 text-red-400">غیرارادی</td>
-                            <td class="p-2">دیواره لوله گوارش</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-             <details class="mt-4 bg-gray-900/50 p-3 rounded-lg">
-                <summary class="font-semibold text-cyan-400">نکات کنکوری بافت ماهیچه‌ای</summary>
-                <ul class="list-disc list-inside mt-2 text-gray-300 space-y-2 pr-2 text-xs sm:text-sm">
-                    <li><b>مخطط بودن:</b> به دلیل آرایش منظم پروتئین‌های اکتین و میوزین است.</li>
-                    <li><b>عدم تقسیم:</b> سلول‌های اسکلتی و قلبی پس از تولد تقسیم نمی‌شوند. رشد آنها ناشی از افزایش حجم سلول است.</li>
-                    <li><b>ماهیچه قلبی:</b> ظاهری مخطط (مثل اسکلتی) اما عملکردی غیرارادی (مثل صاف) دارد و سلول‌هایش منشعب هستند.</li>
-                    <li><b>انقباض:</b> انقباض ماهیچه صاف، کند و بادوام است ولی انقباض اسکلتی، سریع و کوتاه‌مدت است.</li>
-                </ul>
-            </details>
-        </div>
-
-        <!-- 4. بافت عصبی -->
-        <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
-            <h2 class="text-xl font-bold mb-3 text-cyan-400">۴. بافت عصبی</h2>
-            <p class="mb-4 text-gray-300">وظیفه دریافت، پردازش و انتقال پیام‌های عصبی را بر عهده دارد. از دو نوع سلول اصلی تشکیل شده است: نورون‌ها و سلول‌های پشتیبان.</p>
+            <p class="font-semibold mb-2">مثال: حاصل <span dir="ltr">(3.2 × 10⁻⁵) × (2.1 × 10³) / (7.8 × 10⁻²)</span> کدام است؟</p>
+            <p class="mb-3 text-sm">تخمین: <span dir="ltr">~ (3 × 2) / 8 = 6/8 = 0.75</span>. توان ۱۰: <span dir="ltr">(-5 + 3) - (-2) = 0</span>. پس جواب نزدیک <span dir="ltr">0.75</span> است.</p>
             
-             <details class="bg-gray-900/50 p-3 rounded-lg">
-                <summary class="font-semibold text-cyan-400">نکات کنکوری بافت عصبی</summary>
-                <ul class="list-disc list-inside mt-2 text-gray-300 space-y-2 pr-2 text-xs sm:text-sm">
-                    <li><b>جهت پیام:</b> در یک نورون، پیام همیشه از دندریت به جسم سلولی و سپس به آکسون منتقل می‌شود.</li>
-                    <li><b>غلاف میلین:</b> عایقی چرب که توسط سلول‌های پشتیبان ساخته شده و سرعت پیام را به شدت افزایش می‌دهد.</li>
-                    <li><b>هدایت جهشی:</b> در رشته‌های میلین‌دار، پیام از یک گره رانویه به گره بعدی می‌جهد.</li>
-                    <li><b>تفاوت نورون و عصب:</b> نورون یک سلول واحد است، اما عصب مجموعه‌ای از آکسون‌ها و دندریت‌هاست که در کنار هم قرار گرفته‌اند.</li>
-                </ul>
-            </details>
+            <div class="grid grid-cols-2 gap-2 text-center text-sm">
+                <div class="bg-red-900/50 p-2 rounded-lg border border-red-500">۱) <span dir="ltr">8.6 × 10¹</span> <span class="text-red-400">(رد می‌شود)</span></div>
+                <div class="bg-red-900/50 p-2 rounded-lg border border-red-500">۲) <span dir="ltr">8.6 × 10⁻²</span> <span class="text-red-400">(رد می‌شود)</span></div>
+                <div class="bg-green-900/50 p-2 rounded-lg border border-green-500">۳) <span dir="ltr">0.86</span> <span class="text-green-400">(محتمل)</span></div>
+                <div class="bg-red-900/50 p-2 rounded-lg border border-red-500">۴) <span dir="ltr">1.2 × 10⁻³</span> <span class="text-red-400">(رد می‌شود)</span></div>
+            </div>
+        </div>
+        
+        <!-- تکنیک ۴: ساده‌سازی و توان‌ها -->
+        <div class="bg-gray-800 p-4 rounded-xl">
+            <h2 class="text-xl font-bold mb-3 text-sky-400">۴. ساده‌سازی و کار با توان‌ها</h2>
+            <p class="mb-4">همیشه قبل از ضرب، کسرها را تا حد امکان ساده کنید. در کار با نماد علمی، ابتدا تکلیف توان‌های ۱۰ را مشخص کنید و سپس روی اعداد کار کنید.</p>
+            
+            <div class="example-box">
+                <p class="text-gray-400">// Problem</p>
+                <p>(2700 × 0.04) / 1.2</p>
+                <p class="text-gray-400">// Step 1: Scientific Notation</p>
+                <p>(2.7 × 10³ × 4 × 10⁻²) / (1.2)</p>
+                <p class="text-gray-400">// Step 2: Group numbers and powers</p>
+                <p>((2.7 × 4) / 1.2) × 10¹</p>
+                <p class="text-gray-400">// Step 3: Simplify and solve</p>
+                <p>((27 × 4) / 12) × 10¹ = (9 × 1) × 10¹ = 90</p>
+            </div>
         </div>
 
     </div>
